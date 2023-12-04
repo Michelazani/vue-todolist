@@ -27,6 +27,10 @@ createApp({
     },
 
     methods : {
+        removeName(nameToBeRemoved){
+            console.log(nameToBeRemoved);
+            this.namesListPupils.splice(nameToBeRemoved, 1);
+        }
         
     }
     

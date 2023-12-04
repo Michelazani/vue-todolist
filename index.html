@@ -24,11 +24,13 @@
                 <h1 class="p-3">Class number: 111</h1>
                 <input class="mb-4" type="text" name="insert-name" id="insert-name">
                 <ul class="text-start">
-                    <li class="my_border p-1 m-2 d-flex justify-content-between" v-for="(name, index ) in namesListPupils" v-if=" true" > 
-                        <s>{{name.text}}</s>
-                        <span><i class="fa-regular fa-circle-xmark" style="color: #000000;"></i></span>
+
+                    <!-- :class -> se la proprietà di done è true, ALLORA viene aggiunta la classe -->
+                    <li class="my_border p-1 m-2 d-flex justify-content-between" v-for="(name, index ) in namesListPupils" :class="{'line-through': name.done === true }"> 
+                        <p> {{name.text}}</p>
+                        <span><i @click="removeName(nameToBeRemoved)" class="fa-regular fa-circle-xmark" style="color: #000000;"></i></span>
                     </li>
-                    <li class="my_border p-1 m-2" v-for="(name, index ) in namesListPupils" v-else> {{name.text}}</li>
+                    </li>
                 </ul>
             </div>
         </main>

@@ -19,6 +19,11 @@ li.my_border{
     border: 2px solid black;
 }
 
-.true{
+.line-through{
     text-decoration: line-through;
+}
+
+.fa-circle-xmark:hover{
+    background-color: red;
+    border-radius: 1rem;
 }
