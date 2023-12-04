@@ -18,3 +18,7 @@ ul{
 li.my_border{
     border: 2px solid black;
 }
+
+.true{
+    text-decoration: line-through;
+}

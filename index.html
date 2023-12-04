@@ -24,8 +24,8 @@
                 <h1 class="p-3">Class number: 111</h1>
                 <input type="text" name="insert-name" id="insert-name">
                 <ul class="text-start">
-                    <li class="my_border p-1 m-2" v-for="name in namesListPupils"> {{name.text}}</li>
-                    
+                    <li class="my_border p-1 m-2" v-for="(name, index ) in namesListPupils" v-if=" true" > <s>{{name.text}}</s></li>
+                    <li class="my_border p-1 m-2" v-for="(name, index ) in namesListPupils" v-else> {{name.text}}</li>
                 </ul>
             </div>
         </main>
