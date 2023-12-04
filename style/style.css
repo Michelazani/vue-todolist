@@ -4,3 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+div.wrapper{
+    font-family:'Times New Roman', Times, serif;
+    width: 500px;
+    margin-top: 3rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li.my_border{
+    border: 2px solid black;
+}

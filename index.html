@@ -14,11 +14,21 @@
 
 </head>
 <body>
+
     
     <script src="https://unpkg.com/vue@3"></script>
 
     <div id="app">
-
+        <main>
+            <div class="wrapper mx-auto text-center">
+                <h1 class="p-3">Class number: 111</h1>
+                <input type="text" name="insert-name" id="insert-name">
+                <ul class="text-start">
+                    <li class="my_border p-1 m-2" v-for="name in namesListPupils"> {{name.text}}</li>
+                    
+                </ul>
+            </div>
+        </main>
     </div>
 
     <script src="./js/script.js"></script>
