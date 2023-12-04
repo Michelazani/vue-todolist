@@ -14,20 +14,19 @@
 
 </head>
 <body>
-
-    
     <script src="https://unpkg.com/vue@3"></script>
-
     <div id="app">
         <main>
             <div class="wrapper mx-auto text-center">
                 <h1 class="p-3">Class number: 111</h1>
-                <input class="mb-4" type="text" name="insert-name" id="insert-name">
+                <div>
+                    <input class="mb-4" type="text" name="insert-name" id="insert-name" v-model="nameToAdd" >
+                    <button class="ms-3"  @click ="nameToBeAdded (nameToAdd)">Add name to the list</button>
+                </div>
                 <ul class="text-start">
-
                     <!-- :class -> se la proprietà di done è true, ALLORA viene aggiunta la classe -->
-                    <li class="my_border p-1 m-2 d-flex justify-content-between" v-for="(name, index ) in namesListPupils" :class="{'line-through': name.done === true }"> 
-                        <p> {{name.text}}</p>
+                    <li class="my_border p-1 m-2 d-flex justify-content-between" v-for="(name, nameToBeRemoved) in namesListPupils" :class="{'line-through': name.done === true }"> 
+                        <span> {{name.text}}</span>
                         <span><i @click="removeName(nameToBeRemoved)" class="fa-regular fa-circle-xmark" style="color: #000000;"></i></span>
                     </li>
                     </li>
@@ -35,10 +34,6 @@
             </div>
         </main>
     </div>
-
-    <script src="./js/script.js"></script>
-
-
     <script src="./js/script.js"></script>
 </body>
 </html>

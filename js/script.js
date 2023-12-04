@@ -3,6 +3,7 @@ const {createApp} =Vue;
 createApp({
     data() {
         return {
+            nameToAdd : '',
             namesListPupils : [
                 {text: 'Alessia', done: false},
                 {text: 'Beatrice', done: true},
@@ -28,10 +29,18 @@ createApp({
 
     methods : {
         removeName(nameToBeRemoved){
-            console.log(nameToBeRemoved);
             this.namesListPupils.splice(nameToBeRemoved, 1);
-        }
+        },
         
-    }
+        nameToBeAdded (newName){
+            console.warn(newName)
+            // per eliminare gli spazi
+            newName = newName.trim(),
+            //!!!!!! NON SI VISUALIZZAAA!!!!!!!!!!!
+            // si vede in console ma rimanda sulla pagina una casella vuota
+            this.namesListPupils.push(newName),
+            this.nameToAdd = ''
+        }
+    },
     
 }).mount('#app'); 
