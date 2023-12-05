@@ -36,9 +36,7 @@ createApp({
             console.warn(newName)
             // per eliminare gli spazi
             newName = newName.trim(),
-            //!!!!!! NON SI VISUALIZZAAA!!!!!!!!!!!
-            // si vede in console ma rimanda sulla pagina una casella vuota
-            this.namesListPupils.push(newName),
+            this.namesListPupils.push({text: newName, done:false}),
             this.nameToAdd = ''
         }
     },
